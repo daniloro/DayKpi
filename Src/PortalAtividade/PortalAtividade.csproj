@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9DA57B43-D2D4-4083-8EC6-A7D1C7EF3E3F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PortalAtividade</RootNamespace>
+    <AssemblyName>PortalAtividade</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.7\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.0\lib\net451\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\images\check.png" />
+    <Content Include="Content\images\csv.svg" />
+    <Content Include="Content\images\delete.gif" />
+    <Content Include="Content\images\txt.svg" />
+    <Content Include="Content\images\visto.gif" />
+    <Content Include="Content\images\visto.png" />
+    <Content Include="Content\images\wait.png" />
+    <Content Include="Content\images\xls.svg" />
+    <Content Include="Content\images\xlsx.svg" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Pages\Atividade\EventoProblema.aspx" />
+    <Content Include="Pages\Atividade\Planejamento.aspx" />
+    <Content Include="Pages\Kpi\AbertoConcluido.aspx" />
+    <Content Include="Pages\Kpi\AtendimentoMensal.aspx" />
+    <Content Include="Pages\Atividade\Atividade.aspx" />
+    <Content Include="Pages\Atividade\AtividadeAlterada.aspx" />
+    <Content Include="Pages\Atividade\AtividadeAndamento.aspx" />
+    <Content Include="Pages\Atividade\AtividadeManual.aspx" />
+    <Content Include="Pages\Atividade\AvaliacaoAtividade.aspx" />
+    <Content Include="Pages\Kpi\AvaliacaoEquipe.aspx" />
+    <Content Include="Pages\Atividade\AvaliacaoMensal.aspx" />
+    <Content Include="Pages\Kpi\Backlog.aspx" />
+    <Content Include="Pages\Kpi\EmFilaMensal.aspx" />
+    <Content Include="Pages\Kpi\ChamadoRelevante.aspx" />
+    <Content Include="Pages\Checklist\CheckListSistema.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Pages\Atividade\GmudConsulta.aspx" />
+    <Content Include="Pages\Kpi\GmudMensal.aspx" />
+    <Content Include="Pages\Kpi\HoraExtra.aspx" />
+    <Content Include="Pages\Kpi\Meta.aspx" />
+    <Content Include="Pages\Kpi\ObjetivoMissao.aspx" />
+    <Content Include="Pages\Ponto\HorarioConsulta.aspx" />
+    <Content Include="Pages\Ponto\HorarioEquipe.aspx" />
+    <Content Include="Pages\Ponto\HorarioManual.aspx" />
+    <Content Include="Pages\Relatorio\MeusChamados.aspx" />
+    <Content Include="Pages\Kpi\Organograma.aspx" />
+    <Content Include="Pages\Kpi\Performance.aspx" />
+    <Content Include="Pages\Relatorio\RelatorioGeral.aspx" />
+    <Content Include="Pages\Adm\RelatorioKpi.aspx" />
+    <Content Include="Pages\Adm\ResumoKpi.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Chart\orgchart.js" />
+    <Content Include="Scripts\daycoval.dialog.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery.alphanumeric.js" />
+    <Content Include="Scripts\jquery.mask.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="UserControl\AtividadeHistorico.ascx" />
+    <Content Include="UserControl\Chart\Bar.ascx" />
+    <Content Include="UserControl\Chart\OrgChart.ascx" />
+    <Content Include="UserControl\Kpi\AbertoConcluido.ascx" />
+    <Content Include="UserControl\Kpi\Atendimento.ascx" />
+    <Content Include="UserControl\Kpi\Backlog.ascx" />
+    <Content Include="UserControl\Kpi\EmFila.ascx" />
+    <Content Include="UserControl\Chart\BarChart.ascx" />
+    <Content Include="UserControl\Chart\ColumnChart.ascx" />
+    <Content Include="UserControl\Chart\ComboChart.ascx" />
+    <Content Include="UserControl\Kpi\Performance.ascx" />
+    <Content Include="UserControl\Chart\Tabela.ascx" />
+    <Content Include="UserControl\FiltroGrupo.ascx" />
+    <Content Include="UserControl\FiltroMes.ascx" />
+    <Content Include="UserControl\FiltroMesGestor.ascx" />
+    <Content Include="UserControl\FiltroMesGestorOperador.ascx" />
+    <Content Include="UserControl\FiltroMesGrupo.ascx" />
+    <Content Include="UserControl\FiltroMesOperador.ascx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Code\LdapAuthentication.cs" />
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Atividade\EventoProblema.aspx.cs">
+      <DependentUpon>EventoProblema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Atividade\EventoProblema.aspx.designer.cs">
+      <DependentUpon>EventoProblema.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Atividade\Planejamento.aspx.cs">
+      <DependentUpon>Planejamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Atividade\Planejamento.aspx.designer.cs">
+      <DependentUpon>Planejamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Kpi\AbertoConcluido.aspx.cs">
+      <DependentUpon>AbertoConcluido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Kpi\AbertoConcluido.aspx.designer.cs">
+      <DependentUpon>AbertoConcluido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Kpi\AtendimentoMensal.aspx.cs">
+      <DependentUpon>AtendimentoMensal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Kpi\AtendimentoMensal.aspx.designer.cs">
+      <DependentUpon>AtendimentoMensal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Atividade\Atividade.aspx.cs">
+      <DependentUpon>Atividade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Atividade\Atividade.aspx.designer.cs">
+      <DependentUpon>Atividade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Atividade\AtividadeAlterada.aspx.cs">
+      <DependentUpon>AtividadeAlterada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Atividade\AtividadeAlterada.aspx.designer.cs">
+      <DependentUpon>AtividadeAlterada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Code\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Atividade\AtividadeAndamento.aspx.cs">
+      <DependentUpon>AtividadeAndamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Atividade\AtividadeAndamento.aspx.designer.cs">
+      <DependentUpon>AtividadeAndamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Atividade\AtividadeManual.aspx.cs">
+      <DependentUpon>AtividadeManual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Atividade\AtividadeManual.aspx.designer.cs">
+      <DependentUpon>AtividadeManual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Atividade\AvaliacaoAtividade.aspx.cs">
+      <DependentUpon>AvaliacaoAtividade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Atividade\AvaliacaoAtividade.aspx.designer.cs">
+      <DependentUpon>AvaliacaoAtividade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Kpi\AvaliacaoEquipe.aspx.cs">
+      <DependentUpon>AvaliacaoEquipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Kpi\AvaliacaoEquipe.aspx.designer.cs">
+      <DependentUpon>AvaliacaoEquipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Atividade\AvaliacaoMensal.aspx.cs">
+      <DependentUpon>AvaliacaoMensal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Atividade\AvaliacaoMensal.aspx.designer.cs">
+      <DependentUpon>AvaliacaoMensal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Kpi\Backlog.aspx.cs">
+      <DependentUpon>Backlog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Kpi\Backlog.aspx.designer.cs">
+      <DependentUpon>Backlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Kpi\EmFilaMensal.aspx.cs">
+      <DependentUpon>EmFilaMensal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Kpi\EmFilaMensal.aspx.designer.cs">
+      <DependentUpon>EmFilaMensal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Kpi\ChamadoRelevante.aspx.cs">
+      <DependentUpon>ChamadoRelevante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Kpi\ChamadoRelevante.aspx.designer.cs">
+      <DependentUpon>ChamadoRelevante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Checklist\CheckListSistema.aspx.cs">
+      <DependentUpon>CheckListSistema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Checklist\CheckListSistema.aspx.designer.cs">
+      <DependentUpon>CheckListSistema.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Atividade\GmudConsulta.aspx.cs">
+      <DependentUpon>GmudConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Atividade\GmudConsulta.aspx.designer.cs">
+      <DependentUpon>GmudConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Kpi\GmudMensal.aspx.cs">
+      <DependentUpon>GmudMensal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Kpi\GmudMensal.aspx.designer.cs">
+      <DependentUpon>GmudMensal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Kpi\HoraExtra.aspx.cs">
+      <DependentUpon>HoraExtra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Kpi\HoraExtra.aspx.designer.cs">
+      <DependentUpon>HoraExtra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Kpi\Meta.aspx.cs">
+      <DependentUpon>Meta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Kpi\Meta.aspx.designer.cs">
+      <DependentUpon>Meta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Kpi\ObjetivoMissao.aspx.cs">
+      <DependentUpon>ObjetivoMissao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Kpi\ObjetivoMissao.aspx.designer.cs">
+      <DependentUpon>ObjetivoMissao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Ponto\HorarioConsulta.aspx.cs">
+      <DependentUpon>HorarioConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Ponto\HorarioConsulta.aspx.designer.cs">
+      <DependentUpon>HorarioConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Ponto\HorarioEquipe.aspx.cs">
+      <DependentUpon>HorarioEquipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Ponto\HorarioEquipe.aspx.designer.cs">
+      <DependentUpon>HorarioEquipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Ponto\HorarioManual.aspx.cs">
+      <DependentUpon>HorarioManual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Ponto\HorarioManual.aspx.designer.cs">
+      <DependentUpon>HorarioManual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Relatorio\MeusChamados.aspx.cs">
+      <DependentUpon>MeusChamados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Relatorio\MeusChamados.aspx.designer.cs">
+      <DependentUpon>MeusChamados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Kpi\Organograma.aspx.cs">
+      <DependentUpon>Organograma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Kpi\Organograma.aspx.designer.cs">
+      <DependentUpon>Organograma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Kpi\Performance.aspx.cs">
+      <DependentUpon>Performance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Kpi\Performance.aspx.designer.cs">
+      <DependentUpon>Performance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Relatorio\RelatorioGeral.aspx.cs">
+      <DependentUpon>RelatorioGeral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Relatorio\RelatorioGeral.aspx.designer.cs">
+      <DependentUpon>RelatorioGeral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Adm\RelatorioKpi.aspx.cs">
+      <DependentUpon>RelatorioKpi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Adm\RelatorioKpi.aspx.designer.cs">
+      <DependentUpon>RelatorioKpi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Adm\ResumoKpi.aspx.cs">
+      <DependentUpon>ResumoKpi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Adm\ResumoKpi.aspx.designer.cs">
+      <DependentUpon>ResumoKpi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\AtividadeHistorico.ascx.cs">
+      <DependentUpon>AtividadeHistorico.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\AtividadeHistorico.ascx.designer.cs">
+      <DependentUpon>AtividadeHistorico.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Chart\Bar.ascx.cs">
+      <DependentUpon>Bar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Chart\Bar.ascx.designer.cs">
+      <DependentUpon>Bar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Chart\OrgChart.ascx.cs">
+      <DependentUpon>OrgChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Chart\OrgChart.ascx.designer.cs">
+      <DependentUpon>OrgChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Kpi\AbertoConcluido.ascx.cs">
+      <DependentUpon>AbertoConcluido.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Kpi\AbertoConcluido.ascx.designer.cs">
+      <DependentUpon>AbertoConcluido.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Kpi\Atendimento.ascx.cs">
+      <DependentUpon>Atendimento.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Kpi\Atendimento.ascx.designer.cs">
+      <DependentUpon>Atendimento.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Kpi\Backlog.ascx.cs">
+      <DependentUpon>Backlog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Kpi\Backlog.ascx.designer.cs">
+      <DependentUpon>Backlog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Kpi\EmFila.ascx.cs">
+      <DependentUpon>EmFila.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Kpi\EmFila.ascx.designer.cs">
+      <DependentUpon>EmFila.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Chart\BarChart.ascx.cs">
+      <DependentUpon>BarChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Chart\BarChart.ascx.designer.cs">
+      <DependentUpon>BarChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Chart\ColumnChart.ascx.cs">
+      <DependentUpon>ColumnChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Chart\ColumnChart.ascx.designer.cs">
+      <DependentUpon>ColumnChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Chart\ComboChart.ascx.cs">
+      <DependentUpon>ComboChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Chart\ComboChart.ascx.designer.cs">
+      <DependentUpon>ComboChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Kpi\Performance.ascx.cs">
+      <DependentUpon>Performance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Kpi\Performance.ascx.designer.cs">
+      <DependentUpon>Performance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Chart\Tabela.ascx.cs">
+      <DependentUpon>Tabela.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Chart\Tabela.ascx.designer.cs">
+      <DependentUpon>Tabela.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\FiltroGrupo.ascx.cs">
+      <DependentUpon>FiltroGrupo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\FiltroGrupo.ascx.designer.cs">
+      <DependentUpon>FiltroGrupo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\FiltroMes.ascx.cs">
+      <DependentUpon>FiltroMes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\FiltroMes.ascx.designer.cs">
+      <DependentUpon>FiltroMes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\FiltroMesGestor.ascx.cs">
+      <DependentUpon>FiltroMesGestor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\FiltroMesGestor.ascx.designer.cs">
+      <DependentUpon>FiltroMesGestor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\FiltroMesGestorOperador.ascx.cs">
+      <DependentUpon>FiltroMesGestorOperador.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\FiltroMesGestorOperador.ascx.designer.cs">
+      <DependentUpon>FiltroMesGestorOperador.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\FiltroMesGrupo.ascx.cs">
+      <DependentUpon>FiltroMesGrupo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\FiltroMesGrupo.ascx.designer.cs">
+      <DependentUpon>FiltroMesGrupo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\FiltroMesOperador.ascx.cs">
+      <DependentUpon>FiltroMesOperador.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\FiltroMesOperador.ascx.designer.cs">
+      <DependentUpon>FiltroMesOperador.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PortalAtividade.Business\PortalAtividade.Business.csproj">
+      <Project>{cb7145da-61eb-41dc-ab5b-1fe290fe7fc8}</Project>
+      <Name>PortalAtividade.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PortalAtividade.Model\PortalAtividade.Model.csproj">
+      <Project>{0471f278-a506-43c1-a8cd-546cd7a9d89d}</Project>
+      <Name>PortalAtividade.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63494</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63494/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

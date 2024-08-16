@@ -1,0 +1,116 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.container {
+    max-width: 1500px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+/*input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="select"] {
+    max-width: 280px;
+}*/
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+    .body-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/* Novos */
+.lista-dados{
+    
+}
+    .lista-dados label {
+        font-weight: bold;
+    }
+    .lista-dados ul {
+        padding: 0;
+        list-style-type: none;
+    }
+        .lista-dados ul li label {
+            min-width: 140px;
+            font-weight: bold;
+        }
+
+
+/* Google Tables */
+.table .google-visualization-table-tr-odd {
+    background-color: transparent !important;
+}
+
+.table .google-visualization-table-tr-even {
+    background-color: #F5F5F5 !important;
+}
+
+.table .google-visualization-table-tr-head {
+    font-weight: normal;
+}
+
+table.google-visualization-orgchart-table {
+    border-collapse: separate;
+}
+
+.google-visualization-orgchart-linenode {
+    border: 0;
+}
+
+#ChartOverview .table {
+    margin-bottom: 0;
+    border: none;
+}
+
+#ChartOverview .TotalRow {
+    background-color: #e4e9f4 !important;
+}
+
+    #ChartOverview .TotalRow td {
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.7) 30%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 100%);
+        font-weight: 700;
+    }
+
+.googleHeaderCell {
+}
+
+.TotalCell {
+    font-weight: bold;
+}
+/* End Google Tables */
+
+
+
+.xls {    
+    color: white;
+    padding: 5px 10px 5px 30px;
+    background: url(../../Content/images/xls.svg) left 5px top 8px no-repeat green;
+}
+    .xls:hover {
+        color: white;
+    }
+    
